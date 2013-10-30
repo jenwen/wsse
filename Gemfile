@@ -36,6 +36,7 @@ group :test do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
+  gem 'factory_girl_rails'
 end
 
 
