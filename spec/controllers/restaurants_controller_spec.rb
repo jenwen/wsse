@@ -14,7 +14,12 @@ describe RestaurantsController do
       expect(assigns(:restaurants)).to eq(restaurants)
     end
 
-
-
+    context "#create" do
+      it "creates a restaurant with valid params" do
+        expect {
+          post :create, restaurant:{name: "Pasilla"}
+        }.to change{Restaurant.count}.by(1)
+      end
+    end
   end
 end
