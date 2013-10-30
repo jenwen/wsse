@@ -9,10 +9,10 @@ describe RestaurantsController do
     end
 
     it "assigns @restaurants" do
-      restaurants = Restaurant.all
       get :index
-      expect(assigns(:restaurants)).to eq(restaurants)
+      expect(assigns(:restaurants)).to eq( Restaurant.all)
     end
+
 
     context "#create" do
       it "creates a restaurant with valid params" do
