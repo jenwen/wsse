@@ -20,6 +20,13 @@ describe RestaurantsController do
           post :create, restaurant:{name: "Pasilla"}
         }.to change{Restaurant.count}.by(1)
       end
+      it "doesn't create a restaurant with invalid params" do
+        expect {
+          post :create, restaurant:{name: " "}
+        }.to_not change{Restaurant.count}
+      end
     end
   end
+
+
 end
