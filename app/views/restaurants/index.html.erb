@@ -1,0 +1,10 @@
+<%= form_for @restaurant do |f| %>
+<%= f.label "Restaurant" %>
+<%= f.text_field :name %>
+<%= f.submit %>
+<% end %>
+
+
+<% @restaurants.each do |restaurant| %>
+<p><%= restaurant.name %></p>
+<% end %>
