@@ -1,6 +1,6 @@
 Wsse::Application.routes.draw do
 
-  resources :restaurants, :only => [:index, :create]
+  resources :restaurants, :only => [:index, :create, :show]
   resources :comments, :only => [:create]
 
   root :to => 'restaurants#index'

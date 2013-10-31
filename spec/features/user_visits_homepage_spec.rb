@@ -15,6 +15,12 @@ describe "user visits the homepage" do
     expect(page).to have_content restaurant.name
   end
 
+  it "can click on link to visit restaurant detail page" do
+    visit root_path
+    click_on restaurant.name
+    current_path.should eq restaurant_path(restaurant.id)
+  end
+
 end
 
 
