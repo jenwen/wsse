@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :votes
 
-  validates_presence_of :username, :password, :password_confirmation, :email
+  validates_presence_of :username, :email
 
 
   def self.already_voted_on?(comment_id)
