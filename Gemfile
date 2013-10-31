@@ -34,6 +34,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
