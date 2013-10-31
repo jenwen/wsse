@@ -10,5 +10,10 @@ class RestaurantsController < ApplicationController
     restaurant.save
     redirect_to root_path
   end
+
+  def show
+    @restaurant = Restaurant.find(params[:id])
+    @comment = @restaurant.comments.new
+  end
 end
 
