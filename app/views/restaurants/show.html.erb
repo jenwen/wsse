@@ -10,7 +10,7 @@
 <% @restaurant.comments.each do |comment| %>
   <% if comment.content %>
   <li>
-    <%= comment.content %>
+    <%= comment.content %><i class="fa fa-thumbs-up"></i><i class="fa fa-thumbs-down"></i>
   </li>
   <% end %>
 <% end %>
