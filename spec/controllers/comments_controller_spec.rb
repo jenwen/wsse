@@ -4,6 +4,7 @@ describe CommentsController do
   let(:restaurant){FactoryGirl.create(:restaurant)}
   let(:user){FactoryGirl.create(:user)}
 
+
   context "#create" do
     it "creates a comment" do
       expect {

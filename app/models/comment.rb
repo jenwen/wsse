@@ -4,7 +4,6 @@ class Comment < ActiveRecord::Base
   belongs_to :restaurant
   belongs_to :user
 
-  validates :content, presence: true
-  validates :user_id, presence: true
+  validates_presence_of :content, :user_id, :restaurant_id
 
 end
