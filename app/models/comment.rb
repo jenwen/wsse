@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
-  attr_accessible :content, :user_id, :restaurant_id
+  attr_accessible :content, :restaurant, :user
 
   belongs_to :restaurant
   belongs_to :user

@@ -9,7 +9,6 @@ class User < ActiveRecord::Base
 
   validates_presence_of :username, :password_digest, :email
 
-
   def self.already_voted_on?(comment_id)
     self.votes.find_by_comment_id(comment_id).length > 0
   end
