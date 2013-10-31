@@ -7,6 +7,10 @@
 
 <ul>
 <% @restaurant.comments.each do |comment| %>
-<li><%= comment.content %></li>
+  <% if comment.content %>
+  <li>
+    <%= comment.content %>
+  </li>
+  <% end %>
 <% end %>
 </ul>
