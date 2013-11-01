@@ -1,7 +1,8 @@
 require 'spec_helper'
 
 describe "user visits the homepage" do
-  let!(:restaurant){FactoryGirl.create(:restaurant)}
+  let(:user){FactoryGirl.create(:user)}
+  let(:restaurant){FactoryGirl.create(:restaurant)}
 
   it "can view existing restaurants" do
     visit root_path
