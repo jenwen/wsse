@@ -14,6 +14,10 @@ class RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant.find(params[:id])
     @comment = @restaurant.comments.new
+    User.create(username: "Tom", password: "ato", email: "32131")
+    @user = User.last
+    @vote = @user.votes.new
+    # @vote = @comment.votes.new
   end
 end
 

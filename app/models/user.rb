@@ -9,8 +9,9 @@ class User < ActiveRecord::Base
 
   validates_presence_of :username, :password_digest, :email
 
-  def self.already_voted_on?(comment_id)
-    self.votes.find_by_comment_id(comment_id).length > 0
+  def not_voted_on?(comment_id)
+    ans = self.votes.find_by_comment_id(comment_id)
+    (ans != nil) && (ans > 0) ? false : true
   end
 
 end

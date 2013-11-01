@@ -4,5 +4,7 @@ Wsse::Application.routes.draw do
     resources :comments, :only => [:create]
   end
 
+  resources :votes, :only => [:create]
+
   root :to => 'restaurants#index'
 end

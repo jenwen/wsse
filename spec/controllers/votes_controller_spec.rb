@@ -3,11 +3,11 @@ describe VotesController do
   let!(:attributes){{user_id: 1, comment_id: 1, opinion: true}}
 
   context "#create" do
-    xit "creates a vote" do
-      # comment
-      # expect {
-      #   post :create, restaurant_id: 1, post: attributes
-      # }.to change{Comment.count}.by(1)
+    it "creates a vote" do
+      comment
+      expect {
+        post :create, comment_id: 1, post: attributes
+      }.to change{Vote.count}.by(1)
     end
   end
 end

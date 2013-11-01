@@ -10,8 +10,12 @@
 <% @restaurant.comments.each do |comment| %>
   <% if comment.content %>
   <li>
-    <%= comment.content %><i class="fa fa-thumbs-up"></i><i class="fa fa-thumbs-down"></i>
+    <%= comment.content %>
+    <%= link_to "Up Vote", votes_path(comment_id: comment.id, vote_data: {opinion: true}), method: :post %>
+    post :create, comment_id: 1, post: attributes
   </li>
   <% end %>
 <% end %>
 </ul>
+
+<i class="fa fa-thumbs-up"></i><i class="fa fa-thumbs-down"></i>
